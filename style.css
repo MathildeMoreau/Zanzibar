@@ -1,0 +1,836 @@
+@import url(./font/font.css);
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap");
+* {
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+h3 {
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  font-weight: normal;
+  text-align: center;
+  color: black;
+  margin: 2rem 0;
+}
+
+h3::after {
+  display: block;
+  content: " ";
+  width: 100px;
+  height: 2px;
+  background: #04A7D0;
+  margin: 0 auto;
+}
+
+header {
+  width: 100vw;
+}
+
+header nav {
+  width: 100vw;
+  position: fixed;
+  background: black;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  z-index: 50;
+}
+
+header nav h1 {
+  font-family: 'warnesregular';
+  padding: 2rem;
+}
+
+header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+header nav ul li {
+  padding: 0 2rem;
+  list-style-type: none;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+header .header-element {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 242, 96, 0.4)), to(rgba(7, 117, 230, 0.3))), url(./images/header.jpg);
+  background-image: linear-gradient(rgba(0, 242, 96, 0.4), rgba(7, 117, 230, 0.3)), url(./images/header.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+header .header-element .welcome {
+  margin: 1rem;
+  padding: 15rem 0;
+  width: 100%;
+  height: 30vh;
+  color: white;
+}
+
+header .header-element .welcome #big-title {
+  font-weight: normal;
+}
+
+header .header-element .welcome h2 {
+  font-size: 3rem;
+  font-weight: lighter;
+}
+
+header .header-element .welcome #island-button {
+  width: 10rem;
+  height: 2rem;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  background: white;
+  color: #04A7D0;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+header .header-element .welcome #island-button:hover {
+  background: #0493b7;
+  color: white;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+header .header-element .welcome #contact-button {
+  width: 10rem;
+  height: 2rem;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+header .header-element .welcome #contact-button:hover {
+  background: #0493b7;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.about .about--content {
+  position: relative;
+  margin: 1rem;
+}
+
+.about .about--content img {
+  position: absolute;
+  width: 100vw;
+  opacity: 0.5;
+}
+
+.about .about--content table {
+  z-index: 5;
+  width: 90%;
+}
+
+.about .about--content table .table--icon {
+  color: #D73642;
+  font-size: 2rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.about .about--content table .table--icon:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transform: translateX(20px);
+          transform: translateX(20px);
+}
+
+.about .about--content table .table--icon:hover i {
+  color: grey;
+}
+
+.about .about--content table .table--title {
+  font-size: 2rem;
+}
+
+.about .about--content table .table--description {
+  text-align: justify;
+  padding-bottom: 3rem;
+}
+
+.island {
+  background: #0CE0F5;
+}
+
+.island .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.island .cards .card {
+  margin: 1rem;
+  max-width: 80vw;
+  height: 100%;
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  border-radius: 10px;
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.27);
+          box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.27);
+}
+
+.island .cards .card img {
+  margin: 1rem;
+  height: 60vw;
+}
+
+.island .cards .card h4 {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.island .cards .card p {
+  text-align: justify;
+  margin: 1rem;
+}
+
+.galery .galery--container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1rem;
+}
+
+.galery .galery--container #women {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background: url(./images/galerie/femmes-zanzibar.jpg) 50%;
+}
+
+.galery .galery--container #beach {
+  background: url(./images/galerie/plage-zanzibar.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.galery .galery--container #spices {
+  background: url(./images/galerie/epices-zanzibar.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.galery .galery--container #village {
+  background: url(./images/galerie/village-pecheur-zanzibar.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.galery .galery--container #safari {
+  background: url(./images/galerie/safari-blue.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.galery .galery--container .galery--card {
+  border-radius: 10px;
+  -webkit-box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.27);
+          box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.27);
+  width: 100%;
+  height: 20rem;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  text-transform: uppercase;
+}
+
+.customers {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 242, 96, 0.4)), to(rgba(7, 117, 230, 0.3))), url(./images/the-paysage.jpg);
+  background-image: linear-gradient(rgba(0, 242, 96, 0.4), rgba(7, 117, 230, 0.3)), url(./images/the-paysage.jpg);
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.customers h3 {
+  color: white;
+}
+
+.customers h3::after {
+  background: white;
+}
+
+.customers .quotes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: white;
+  margin: 1rem;
+}
+
+.customers .quotes .quote--card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.customers .quotes .quote--card .quote--text i {
+  color: rgba(255, 255, 255, 0.548);
+  font-size: 3rem;
+}
+
+.customers .quotes .quote--card .quote--text p {
+  font-style: italic;
+  padding: 15px;
+}
+
+.customers .quotes .quote--card .client {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.customers .quotes .quote--card .client img {
+  border-radius: 50%;
+  width: 4rem;
+}
+
+.stays .stays--card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.stays .stays--card .inscription-card {
+  width: 90vw;
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.27);
+          box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.27);
+  border-radius: 10px;
+  margin: 1rem 1rem;
+  padding: 1rem 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.stays .stays--card .inscription-card .inscription-titles {
+  width: 100%;
+  border-bottom: 1px solid rgba(139, 139, 139, 0.678);
+}
+
+.stays .stays--card .inscription-card .inscription-titles h4, .stays .stays--card .inscription-card .inscription-titles h5 {
+  text-transform: uppercase;
+}
+
+.stays .stays--card .inscription-card .inscription-titles h4 {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.stays .stays--card .inscription-card .inscription-titles h5 {
+  font-size: 1.4rem;
+  font-weight: lighter;
+}
+
+.stays .stays--card .inscription-card li {
+  padding: 1rem;
+}
+
+.stays .stays--card .inscription-card button {
+  width: 10rem;
+  height: 2rem;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  background: #04A7D0;
+  color: white;
+  font-weight: normal;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.stays .stays--card .inscription-card button:hover {
+  background: #0dcbfa;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.stays .stays--card #tanzania {
+  background: #0CE0F5;
+  color: white;
+}
+
+.stays .stays--card #tanzania .inscription-titles {
+  border-bottom: 1px solid white;
+}
+
+.stays .stays--card #tanzania .inscription-titles h4 {
+  color: black;
+}
+
+.contact {
+  margin: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact .contact-us p {
+  text-align: left;
+  margin: 2rem;
+}
+
+.contact .coordinates {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contact .coordinates .phone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.contact .coordinates .location {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.contact form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact form label {
+  font-weight: bold;
+}
+
+.contact form .form-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact form .form-group .name, .contact form .form-group .email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact form .form-group .name input, .contact form .form-group .email input {
+  margin: 0 1rem;
+}
+
+.contact form .message {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact form button {
+  width: 10rem;
+  height: 2rem;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 2rem 0;
+  background: #04A7D0;
+  color: white;
+}
+
+.contact iframe {
+  width: 80vw;
+  height: 50vh;
+}
+
+footer {
+  background: black;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 2rem;
+}
+
+footer h4 {
+  font-weight: lighter;
+}
+
+@media all and (min-width: 768px) {
+  header nav ul {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  header .header-element .welcome {
+    margin: 3rem 0;
+    padding: 5rem 10rem;
+    width: 100%;
+    height: 60vh;
+  }
+  header .header-element .welcome h2 {
+    font-size: 5rem;
+  }
+  .about {
+    margin: 3rem 0;
+  }
+  .about .about--content {
+    padding: 5rem 10rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .about .about--content img {
+    width: 50%;
+    opacity: 1;
+    position: relative;
+  }
+  .about .about--content table {
+    background: white;
+    width: 50%;
+  }
+  .galery {
+    margin: 3rem 0;
+    padding: 5rem 10rem;
+  }
+  .galery .galery--container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[9];
+        grid-template-columns: repeat(9, 1fr);
+    -ms-grid-rows: (1fr)[4];
+        grid-template-rows: repeat(4, 1fr);
+    gap: 1rem;
+  }
+  .galery .galery--container #women {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-area: 1 / 1 / 3 / 4;
+  }
+  .galery .galery--container #beach {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 4;
+    -ms-grid-column-span: 6;
+    grid-area: 1 / 4 / 3 / 10;
+  }
+  .galery .galery--container #spices {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-area: 3 / 1 / 5 / 5;
+  }
+  .galery .galery--container #village {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 5;
+    -ms-grid-column-span: 2;
+    grid-area: 3 / 5 / 5 / 7;
+  }
+  .galery .galery--container #safari {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 7;
+    -ms-grid-column-span: 3;
+    grid-area: 3 / 7 / 5 / 10;
+  }
+  .galery .galery--container .galery--card {
+    height: 20rem;
+  }
+  .contact form .form-group {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .contact form .form-group .name, .contact form .form-group .email {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  header nav {
+    position: relative;
+  }
+  .island {
+    margin: 3rem 0;
+    padding: 5rem 10rem;
+  }
+  .island .cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .island .cards .card {
+    max-width: 25vw;
+  }
+  .island .cards .card img {
+    margin: 1rem;
+    height: 20vw;
+  }
+  .customers {
+    margin: 3rem 0;
+    padding: 5rem 10rem;
+  }
+  .customers .quotes {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .customers .quotes .quote--card {
+    margin: 3rem;
+    width: 20vw;
+  }
+  .stays {
+    margin: 3rem 0;
+    padding: 5rem 10rem;
+  }
+  .stays .stays--card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .stays .stays--card .inscription-card {
+    width: 20vw;
+    min-height: 50vh;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .contact {
+    margin: 3rem 0;
+    padding: 5rem 10rem;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .contact .contact-us form {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .contact iframe {
+    width: 50vw;
+  }
+}
+/*# sourceMappingURL=style.css.map */

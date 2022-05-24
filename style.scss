@@ -1,0 +1,569 @@
+@import url(./font/font.css);
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap');
+
+$textColor : white;
+$buttonColor : #04A7D0;
+
+@mixin button {
+    width: 10rem;
+    height: 2rem;
+    border-radius: 10px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@mixin titles {
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-weight: normal;
+    text-align: center;
+    color: black;
+    margin: 2rem 0;
+}
+
+@mixin margin {
+    margin: 3rem 0;
+}
+
+@mixin padding {
+    padding: 5rem 10rem;
+}
+
+@mixin backgrounds {
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@mixin flexcenter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+*{
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+h3{
+    @include titles;
+    &::after{
+        display: block;
+        content: " ";
+        width: 100px;
+        height: 2px;
+        background: $buttonColor;
+        margin: 0 auto;
+    }
+}
+
+header{
+    width: 100vw;
+    nav{
+        width: 100vw;
+        position: fixed;
+        background: black;
+        color: $textColor;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        z-index: 50;
+        h1 {
+            font-family: 'warnesregular';
+            padding: 2rem;
+        }  
+        ul{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            li{
+                padding: 0 2rem;
+                list-style-type: none;
+                a {
+                    color: $textColor;
+                    text-decoration: none;
+                    transition: 0.5s;
+                }
+            }
+        }
+    }
+    .header-element{
+        background-image: linear-gradient(
+            rgba(0, 242, 96, 0.4),
+            rgba(7, 117, 230, 0.3)
+          ), url(./images/header.jpg);
+        background-position: center;
+        @include backgrounds;
+        
+        .welcome{
+            margin: 1rem;
+            padding: 15rem 0;
+            width: 100%;
+            height: 30vh;
+            color: $textColor;
+            #big-title{
+                font-weight: normal;
+            }
+            h2{
+                font-size: 3rem;
+                font-weight: lighter;
+            }
+            #island-button{
+                @include button;
+                background: white;
+                color: $buttonColor;
+                transition: 1s;
+                &:hover{
+                    background: darken($buttonColor, 5%);
+                    color: $textColor;
+                    transition: 1s;
+                }
+            }
+            #contact-button{
+                @include button;
+                background: transparent;
+                color: $textColor;
+                border: 1px solid white;
+                transition: 1s;
+                &:hover{
+                    background: darken($buttonColor, 5%);
+                    transition: 1s;
+                }
+            }
+        }
+    }
+}
+
+.about{
+    .about--content{
+        position: relative;
+        margin: 1rem;
+        img{
+            position: absolute;
+            width: 100vw;
+            opacity: 0.5;
+        }
+        table{
+            z-index: 5;
+            width: 90%;
+            .table--icon{
+                color: #D73642;
+                font-size: 2rem;
+                transition: 0.5s;
+                &:hover{
+                    transition: 0.5s;
+                    transform: translateX(20px);
+                    i{
+                        color: grey;
+                    }
+                  }
+            }
+            .table--title{
+                font-size: 2rem;
+            }
+            .table--description{
+                text-align: justify;
+                padding-bottom: 3rem;
+            }
+        }
+    }
+}
+
+.island{
+    background: #0CE0F5;
+    .cards{
+        @include flexcenter;
+        flex-direction: column;
+        .card{
+            margin: 1rem;
+            max-width: 80vw;
+            height: 100%;
+            background: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            border-radius: 10px;
+            box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.27);
+            img{
+                margin: 1rem;
+                height: 60vw;
+            }
+            h4{
+                text-transform: uppercase;
+                text-align: center;
+            }
+            p{
+                text-align: justify;
+                margin: 1rem;
+            }
+        }
+    }
+}
+
+.galery{
+    .galery--container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        #women{
+            @include backgrounds;
+            background: url(./images/galerie/femmes-zanzibar.jpg) 50%;
+        }
+        #beach{
+            background: url(./images/galerie/plage-zanzibar.jpg);
+            @include backgrounds;
+        }
+        #spices{
+            background: url(./images/galerie/epices-zanzibar.jpg);
+            @include backgrounds;
+        }
+        #village{
+            background: url(./images/galerie/village-pecheur-zanzibar.jpg);
+            @include backgrounds;
+        }
+        #safari{
+            background: url(./images/galerie/safari-blue.jpg);
+            @include backgrounds;
+        }
+        .galery--card{
+            border-radius: 10px;
+            box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.27);
+            width: 100%;
+            height: 20rem;
+            color: $textColor;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-end;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.customers{
+    background-image: linear-gradient(
+        rgba(0, 242, 96, 0.4),
+        rgba(7, 117, 230, 0.3)
+      ), url(./images/the-paysage.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    @include backgrounds;
+    h3{
+        color: $textColor;
+        &::after{
+            background: white;
+        }
+    }
+    .quotes{
+        @include flexcenter;
+        flex-direction: column;
+        color: $textColor;
+        margin: 1rem;
+        .quote--card{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .quote--text{
+                i{
+                    color: rgba(255, 255, 255, 0.548);
+                    font-size: 3rem;
+                }
+                p{
+                    font-style: italic;
+                    padding: 15px;
+                }
+            }
+            .client{
+                display: flex;
+                align-items: center;
+                img{
+                    border-radius: 50%;
+                    width: 4rem
+                }
+            }
+            }
+    }
+}
+
+.stays{
+    .stays--card{
+        @include flexcenter;
+        flex-direction: column;
+        .inscription-card{
+            width: 90vw;
+            box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.27);
+            border-radius: 10px;
+            margin: 1rem 1rem;
+            padding: 1rem 0.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            .inscription-titles{
+                width: 100%;
+                border-bottom: 1px solid rgba(139, 139, 139, 0.678);
+                h4, h5{
+                    text-transform: uppercase;
+                }
+                h4{
+                    font-weight: bold;
+                    font-size: 1.5rem;
+                }
+                h5{
+                    font-size: 1.4rem;
+                    font-weight: lighter;
+                }
+            }
+            li{
+                padding: 1rem;
+            }
+            button{
+                @include button;
+                background: $buttonColor;
+                color: $textColor;
+                font-weight: normal;
+                transition: 0.5s;
+                &:hover{
+                    background: lighten($buttonColor, 10%);
+                    transition: 0.5s;
+                }
+            }
+        }
+        #tanzania{
+            background: #0CE0F5;
+            color: $textColor;
+            .inscription-titles{
+                border-bottom: 1px solid $textColor;
+                h4{
+                    color: black;
+                }
+            }
+        }
+    }
+}
+
+.contact{
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .contact-us{
+        p{
+            text-align: left;
+            margin: 2rem;
+        }
+    }
+    .coordinates{
+        display: flex;
+        .phone{
+            @include flexcenter;
+        }
+        .location{
+            @include flexcenter;
+        }
+    }
+    form{
+        @include flexcenter;
+        flex-direction: column;
+        label{
+            font-weight: bold;
+        }
+        .form-group{
+            display: flex;
+            flex-direction: column;
+            .name, .email{
+                display: flex;
+                flex-direction: column;
+                input{
+                    margin: 0 1rem;
+                }
+            }
+        }
+        .message{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+        }
+        button{
+            @include button;
+            margin: 2rem 0 ;
+            background: $buttonColor;
+            color: $textColor;
+        }
+    }
+    iframe{
+        width: 80vw;
+        height: 50vh;
+    }
+}
+
+footer{
+    background: black;
+    color: white;
+    @include flexcenter;
+    padding: 2rem;
+    h4{
+        font-weight: lighter;
+    }
+}
+
+//   RESPONSIVE
+
+@media all and (min-width: 768px) {
+    header{
+        nav{
+            ul{
+                flex-direction: row;
+            }
+        }    
+        .header-element{
+            .welcome{
+                @include margin;
+                @include padding;
+                width: 100%;
+                height: 60vh;
+                h2{
+                    font-size: 5rem;
+                }
+    
+        }
+    }
+}
+
+    .about{
+        @include margin;
+        .about--content{
+            @include padding;
+            @include flexcenter; 
+            display: flex;
+            justify-content: center;
+            align-items: center;   
+            img{
+                width: 50%;
+                opacity: 1;
+                position: relative;
+            }
+            table{
+                background: white;
+                width: 50%;
+            }
+        }
+    }
+    .galery{
+        @include margin;
+        @include padding;
+        .galery--container{
+            display: grid;
+            grid-template-columns: repeat(9, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            gap: 1rem;
+            #women{
+                grid-area: 1 / 1 / 3 / 4;
+            }
+            #beach{
+                grid-area: 1 / 4 / 3 / 10; 
+            }
+            #spices{
+                grid-area: 3 / 1 / 5 / 5;
+            }
+            #village{
+                grid-area: 3 / 5 / 5 / 7;
+            }
+            #safari{
+                grid-area: 3 / 7 / 5 / 10;
+            }
+            .galery--card{
+                height: 20rem;
+            }
+        }
+    }
+    
+    .contact{
+        form{
+            .form-group{
+                flex-direction: row;
+                .name, .email{
+                    flex-direction: row;
+                }
+            }
+        }
+    }
+}
+
+
+@media all and (min-width: 1024px) {
+    header{
+        nav{
+            position: relative;
+        }
+    }
+    .island{
+        @include margin;
+        @include padding;
+        .cards{
+            @include flexcenter;
+            flex-direction: row;
+            .card{
+                max-width: 25vw;
+                img{
+                    margin: 1rem;
+                    height: 20vw;
+                }
+            }
+        }
+    }
+    
+    
+    .customers{
+        @include margin;
+        @include padding;
+        .quotes{
+            flex-direction: row;
+            .quote--card{
+                margin: 3rem;
+                width: 20vw;
+            }
+        }
+    }
+    .stays{
+        @include margin;
+        @include padding;
+        .stays--card{
+            @include flexcenter;
+            flex-direction: row;
+            .inscription-card{
+                width: 20vw;
+                min-height: 50vh;
+            }
+        }
+    }
+}
+
+@media all and (min-width: 1200px) {
+    .contact{
+        @include margin;
+        @include padding;    
+        flex-direction: row;
+        .contact-us{
+            form{
+                align-items: flex-start;
+            }
+        }
+        iframe{
+            width: 50vw;
+        }
+    }
+}
+
+@media all and (min-width: 768px){
+
+}
